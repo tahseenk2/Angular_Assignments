@@ -1,0 +1,210 @@
+
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <form [formGroup]="employeeForm" novalidate>
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="firstname">First-Name</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="firstnameId" required placeholder="name Required"
+            formControlName="firstname" name="firstname" [ngClass]="{'is-invalid': (employeeForm.get('firstname').touched ||
+                 employeeForm.get('firstname').dirty) &&
+                 !employeeForm.get('firstname').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('firstname').errors?.required">
+              Please enter your name.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="lastname">Last-Name</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="lastnameId" required placeholder="lastname Required"
+            formControlName="lastname" name="lastname" [ngClass]="{'is-invalid': (employeeForm.get('lastname').touched ||
+                 employeeForm.get('lastname').dirty) &&
+                 !employeeForm.get('lastname').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('lastname').errors?.required">
+              Please enter your name.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="email">Email</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="emailId" required placeholder="email Required"
+            formControlName="email" name="email" [ngClass]="{'is-invalid': (employeeForm.get('email').touched ||
+                 employeeForm.get('email').dirty) &&
+                 !employeeForm.get('email').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('email').errors?.required">
+              Please enter your email.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="cno">Contact-Number</label>
+        <div class="col-md-8">
+          <input type="number" class="form-control" id="cnoid" required placeholder="Contact-Number Required"
+            formControlName="cno" name="cno" [ngClass]="{'is-invalid': (employeeForm.get('cno').touched ||
+                 employeeForm.get('cno').dirty) &&
+                 !employeeForm.get('cno').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('cno').errors?.required">
+              Please enter your Contact Number.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="address">Address</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="addid" required placeholder="Address Required"
+            formControlName="address" name="address" [ngClass]="{'is-invalid': (employeeForm.get('address').touched ||
+                 employeeForm.get('address').dirty) &&
+                 !employeeForm.get('address').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('address').errors?.required">
+              Please enter your Address.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="username">Username</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="userid" required placeholder="UserName Required"
+            formControlName="username" name="username" [ngClass]="{'is-invalid': (employeeForm.get('username').touched ||
+                 employeeForm.get('username').dirty) &&
+                 !employeeForm.get('username').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('username').errors?.required">
+              Please enter your Username.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="password">Password</label>
+        <div class="col-md-8">
+          <input type="password" class="form-control" id="passid" required placeholder="Password Required"
+            formControlName="password" name="password" [ngClass]="{'is-invalid': (employeeForm.get('password').touched ||
+                 employeeForm.get('password').dirty) &&
+                 !employeeForm.get('password').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('password').errors?.required">
+              Please enter your Password.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="gender">Gender[Male/Female]</label>
+        <div class="col-md-8">
+          <input type="text" class="form-control" id="genderid" required placeholder="Gender Required"
+            formControlName="gender" name="gender" [ngClass]="{'is-invalid': (employeeForm.get('gender').touched ||
+                 employeeForm.get('gender').dirty) &&
+                 !employeeForm.get('gender').valid }">
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('gender').errors?.required">
+              Please enter your Gender.
+            </span>
+          </span>
+        </div>
+      </div>
+      
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="qualification">Qualification[SSC/HSC/UG/PG]</label>
+        <div class="col-md-8">
+          <input class="form-control" id="qualificationId" type="text" placeholder="qualification (required)"
+            formControlName="qualification" name="qualification" [ngClass]="{'is-invalid': (employeeForm.get('qualification').touched ||
+                 employeeForm.get('qualification').dirty) &&
+                 !employeeForm.get('qualification').valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('qualification').errors?.required">
+              Please enter your Qualification.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group row mb-2">
+        <label class="col-md-2 col-form-label" for="experience">Experience [In Years]</label>
+        <div class="col-md-8">
+          <input class="form-control" id="experienceId" type="text" placeholder="Experience (required)" name="experiance"
+            formControlName="experience" [ngClass]="{'is-invalid': (employeeForm.get('experience').touched ||
+                 employeeForm.get('experience').dirty) &&
+                 !employeeForm.get('experience').valid }" />
+          <span class="invalid-feedback">
+            <span *ngIf="employeeForm.get('experience').errors?.required">
+              Please enter your Experience.
+            </span>
+          </span>
+        </div>
+      </div>
+
+      
+
+     <!-- <div formArrayName="languages" *ngFor="let language of languages.controls; let i=index">
+        <div>
+          <div class="form-group row mb-2">
+            <label class="col-md-2 col-form-label" for="language">Coding-Language</label>
+            <div class="col-md-8">
+              <input class="form-control"
+                     id="languageId"
+                     type="text"
+                     placeholder="language (required)"
+                     formControlName="{{i}}"
+                     />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="form-group row mb-2">
+        <div class="col-md-4">
+          <button class="btn btn-outline-primary" type="button" title='Add another coding language'
+            (click)="addLanguages()">
+            Add Another Coding language
+
+          </button>
+        </div>
+      </div>-->
+
+
+      <div class="offset-md-2 col-md-4">
+        <button class="btn btn-primary mr-3"
+                 style="width:80px;"
+                 type="button"
+                 (click)="saveEmployee()">
+          
+          Save
+        </button>
+        <button class="btn btn-outline-secondary mr-3" style="width:80px;" type="button" title="Cancel your edits">
+          Cancel
+        </button>
+        <button class="btn btn-outline-warning"
+                style="width:80px"
+                type="button"
+                title="Delete this product"
+                (click)="deleteEmployee()">
+          Delete
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>

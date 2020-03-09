@@ -1,0 +1,45 @@
+<div class="card">
+  <div class="card-header">
+    {{pageTitle}}
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+        <table class="table mb-0">
+          <thead>
+            <tr >
+              <th>FIRSTNAME</th>
+              <th>LASTNAME</th>
+              <th>EMAIL</th>
+              <th>CONTACT-NUMBER</th>
+              <th>ADDRESS</th>
+              <th>USERNAME</th>
+              <th>PASSWORD</th>
+              <th>GENDER</th>
+              <th>QUALIFICATION</th>
+              <th>EXPERIENCE</th>
+              <th>LANGUAGE</th>
+              <th></th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let employee of employees">
+              <td>{{employee.firstname}}</td>
+              <td>{{employee.lastname}}</td>
+              <td>{{employee.email}}</td>
+              <td>{{employee.cno}}</td>
+              <td>{{employee.address}}</td>
+              <td>{{employee.username}}</td>
+              <td>{{employee.password}}</td>
+              <td>{{employee.gender}}</td>
+              <td>{{employee.qualification}}</td>
+              <td>{{employee.experience}}</td>
+              <td>{{employee.languages}}</td>
+              <td><a [routerLink]="['/employees',employee.id,'edit']">Edit</a></td>
+              <td><a id="aj" (click)="deleteEmployee(employee)" >Delete</a></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>
